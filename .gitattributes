@@ -1,22 +1,26 @@
 
 
 from tkinter import *
+# From tkinter import * is im pretty how I got it to load as a gui from my understanding. For some reason there would be random phrases that would go under it that would screw up the code so just delet anything that shows up under it.
 
 def buttonClick(number):
     global operator
     operator = operator + str(number) 
     input_value.set(operator)
+  # The function above im pretty sure is what let me click on the numbers on the calculator. After making this function I had to add ,command=lambda: buttonClick(the number)) to the code below.
 
 def buttonClear():
     global operator
     operator = ""
     input_value.set("")
+   # This function above me to my understanding is what cleared the calculator when pressing the C button that why on the line of code with C instead of ,command=lambda: buttonClick(number)) it is ,command=lambda: buttonClick(clear)).
 
 def buttonEqual():
     global operator
     result = str(eval(operator))
     input_value.set(result)
     operator = ""
+   # And finally this function above is what did the math im pretty sure agian I could be wrong I do not know what im doing.
 
 
 main = Tk()
@@ -89,3 +93,4 @@ btn_div.grid(row=4,column=3)
 
 
 main.mainloop() 
+# This I can tell you 100% that it just kept the code from not ending the second I started it it just kept looping it!
